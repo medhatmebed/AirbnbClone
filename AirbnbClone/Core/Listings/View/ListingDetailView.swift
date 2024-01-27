@@ -9,19 +9,14 @@ import SwiftUI
 import MapKit
 
 struct ListingDetailView: View {
-    
-    var images = [
-        "listing-1",
-        "listing-2",
-        "listing-3",
-        "listing-4",
-    ]
     @Environment(\.dismiss) var dismiss
+    let listing: Listing
     
     var body: some View {
         ScrollView {
+            //header carouselView
             ZStack(alignment: .topLeading) {
-                ListingImageCarouselView()
+                ListingImageCarouselView(listing: listing)
                     .frame(height: 320)
                 
                 Button {
@@ -38,7 +33,7 @@ struct ListingDetailView: View {
                 }
 
             }
-            
+            //center
             VStack(alignment: .leading, spacing: 8) {
                 Text("Miami Villa")
                     .font(.title)
@@ -174,8 +169,10 @@ struct ListingDetailView: View {
             }
             .padding()
         }
+        .toolbar(.hidden, for: .tabBar)
         .ignoresSafeArea()
         .padding(.bottom, 64)
+        //floating footer view
         .overlay(alignment: .bottom) {
             VStack {
                 Divider()
@@ -217,5 +214,5 @@ struct ListingDetailView: View {
 }
 
 #Preview {
-    ListingDetailView()
+    ListingDetailView(listing: DeveloperPreview.shared.listings[0])
 }

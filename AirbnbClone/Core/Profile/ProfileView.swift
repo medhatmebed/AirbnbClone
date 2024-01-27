@@ -49,6 +49,7 @@ struct ProfileView: View {
                 ProfileOptionRowView(imageName: "gear", title: "Accessibility")
                 ProfileOptionRowView(imageName: "questionmark.circle", title: "help center")
             }
+         //   Spacer()
             .padding(.vertical)
         }
         .padding()

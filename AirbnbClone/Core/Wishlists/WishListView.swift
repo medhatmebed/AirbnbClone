@@ -19,7 +19,21 @@ struct WishListView: View {
                     Text("you can create, view or edit wishlists once you've logged in")
                         .font(.footnote)
                 }
+                Button {
+                    
+                } label: {
+                    Text("Log in")
+                        .foregroundStyle(.white)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .frame(width: 360, height: 48)
+                        .background(.pink)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
+                Spacer()
             }
+            .padding()
+            .navigationTitle("Wishlists")
         }
     }
 }
