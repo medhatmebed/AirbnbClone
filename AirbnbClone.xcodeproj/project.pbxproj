@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B20EBF82B66C3B2003EC119 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B20EBF72B66C3B2003EC119 /* Regions.swift */; };
 		8B6293D02B62ADB00033B266 /* AirbnbCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6293CF2B62ADB00033B266 /* AirbnbCloneApp.swift */; };
 		8B6293D22B62ADB00033B266 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6293D12B62ADB00033B266 /* ContentView.swift */; };
 		8B6293D42B62ADB50033B266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6293D32B62ADB50033B266 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B20EBF72B66C3B2003EC119 /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		8B6293CC2B62ADB00033B266 /* AirbnbClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6293CF2B62ADB00033B266 /* AirbnbCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbCloneApp.swift; sourceTree = "<group>"; };
 		8B6293D12B62ADB00033B266 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6294022B6348430033B266 /* DeveloperPreview.swift */,
+				8B20EBF72B66C3B2003EC119 /* Regions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				8B6293EC2B62B0440033B266 /* ListingItemView.swift in Sources */,
 				8B6293D22B62ADB00033B266 /* ContentView.swift in Sources */,
 				8B6294082B634AE00033B266 /* ExploreViewModel.swift in Sources */,
+				8B20EBF82B66C3B2003EC119 /* Regions.swift in Sources */,
 				8B6293EA2B62AEE80033B266 /* ExploreView.swift in Sources */,
 				8B6294012B6343770033B266 /* Listing.swift in Sources */,
 				8B6293FB2B62FA9F0033B266 /* WishListView.swift in Sources */,
