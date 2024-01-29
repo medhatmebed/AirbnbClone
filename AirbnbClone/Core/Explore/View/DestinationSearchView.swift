@@ -12,11 +12,12 @@ enum DestinationSearchOption {
 }
 struct DestinationSearchView: View {
     @Binding var show: Bool
-    @State private var destination = ""
+    
     @State private var selectedOption: DestinationSearchOption = .location
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var numGuests = 0
+    @EnvironmentObject var viewModel : ExploreViewModel
     
     var body: some View {
         VStack {
@@ -25,6 +26,7 @@ struct DestinationSearchView: View {
                 Button {
                     withAnimation(.snappy) {
                         show.toggle()
+                        viewModel.updateListingsForLocation()
                     }
                 } label: {
                     Image(systemName: "xmark.circle")
@@ -34,9 +36,10 @@ struct DestinationSearchView: View {
                 
                 Spacer()
                 
-                if !destination.isEmpty {
+                if !viewModel.searchLocation.isEmpty {
                     Button {
-                        destination = ""
+                        viewModel.searchLocation = ""
+                        viewModel.updateListingsForLocation()
                     } label: {
                         Text("Clear")
                             .foregroundStyle(.black)
@@ -57,8 +60,12 @@ struct DestinationSearchView: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .imageScale(.small)
-                        TextField("Search destination", text: $destination)
+                        TextField("Search destination", text: $viewModel.searchLocation)
                             .font(.subheadline)
+                            .onSubmit {
+                                viewModel.updateListingsForLocation()
+                                show.toggle()
+                            }
                     }
                     .frame(height: 44)
                     .padding(.horizontal)
