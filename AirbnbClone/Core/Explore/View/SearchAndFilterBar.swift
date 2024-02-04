@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchAndFilterBar: View {
+    ///search functionality 
     @Binding var location: String
     
     var body: some View {
